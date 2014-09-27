@@ -1,0 +1,991 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>CloserBy-Same Day Groceries</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").t0oggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+<!-- start menu -->     
+<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/megamenu.js"></script>
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+<!-- end menu -->
+<!-- top scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+   <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>
+</head>
+<body>
+  <div class="header-top">
+		<div class="wrap">
+			
+				<div class="logo">
+					<a href="index.html"><h1>CloserBy</h1></a>
+				</div>
+			<div class="cssmenu">
+			   <ul>
+					<strong>SHOPPING</strong>
+					   	<select>
+							  <option value="grocery">GROCERY</option>
+							  <option value="pharma">PHARMA</option>
+							  <option value="gift">GIFT & BABY SHOP</option>
+							  <option value="bekery">BEKERY</option>
+						</select>
+						<strong>AT</strong>
+					   <select>
+							  <option value="Retailers">SMART</option>
+							  <option value="Nilgir">NILGIRI</option>
+							  <option value="MK Retailer">MK RETAILER</option>
+							  <option value="Shoper Stop">SHOPER STOP</option>
+						</select>
+					<!-- <li><a href="#"><b>Categories<b></a></li>
+					<li><a href="#">You are Shoping from Nilgiri</a></li>-->
+					<li><a href="#">PURCHASE ORDER</a></li> 
+					<li><a href="#">PROMO</a></li> 
+					<li><a href="#">MENU MAKER</a></li>
+					<li><a href="#">TRACK ORDER</a></li>
+					<li><a href="#">MY ACCOUNT</a></li>
+					<li><a href="#">SIGN UP</a></li>	
+					<!--<li >	  
+							<input type="text" name="search" class="textbox" value="Search Products" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+							<input type="submit" value="submit" id="submit" name="submit">
+							<div id="response"> </div>
+			 		</li>-->
+					<div class="input-group">
+						<input type="text" name="table_search" class="form-control input-sm pull-right" style="width: 300px; " placeholder="Search Product">
+						<input type="submit" value="submit" id="submit" name="submit">
+					</div>
+			   </ul>
+			</div>
+			
+		
+			<div class="clear"></div>
+		</div>
+   </div>
+      
+   <div class="header-bottom">
+   	<div class="wrap">
+   		<!-- start header menu -->
+		<ul class="megamenu skyblue">
+		    <li><a class="color1" href="index.html">Home</a></li>
+			<li class="grid"><a class="color2" href="#">Staples</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+							<!-------------------------------------------------------------------------------------------------->
+								<h4>Rices and Pulses</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;   Rice</a></li>
+									<li><a href="shop.html">&#9830;  Basmati Rice</a></li>
+									<li><a href="shop.html">&#9830;  Idli & Dosa Rice</a></li>
+									<li><a href="shop.html">&#9830;  Other Pulses</a></li>
+									<li><a href="shop.html">&#9830;  Soya Chunks</a></li>
+									<li><a href="shop.html">&#9830;  Beans</a></li>
+									<li><a href="shop.html">&#9830;  Milletes</a></li>
+								</ul>	
+							</div>
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Flour and Suji</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Atta</a></li>
+									<li><a href="shop.html">&#9830;  Suji and Rava</a></li>
+									<li><a href="shop.html">&#9830;  Besan and Maida</a></li>
+									<li><a href="shop.html">&#9830;  Rice Flour</a></li>
+									<li><a href="shop.html">&#9830;  Ragi Flour</a></li>
+									<li><a href="shop.html">&#9830;  Other Flour</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Oil and Ghee</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Sunflower</a></li>
+									<li><a href="shop.html">&#9830;  Blended Oils</a></li>
+									<li><a href="shop.html">&#9830;  Other Oils</a></li>
+									<li><a href="shop.html">&#9830;  Olive</a></li>
+									<li><a href="shop.html">&#9830;  Ghee</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Dry Fruits</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Dates</a></li>
+									<li><a href="shop.html">&#9830;  Cashsew</a></li>
+									<li><a href="shop.html">&#9830;  Figs and Raisins</a></li>
+									<li><a href="shop.html">&#9830;  Almonds</a></li>
+									<li><a href="shop.html">&#9830;  Other Dry Fruits</a></li>
+								</ul>	
+							</div>
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Salt and Sugar</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Salt</a></li>
+									<li><a href="shop.html">&#9830;  Sugar</a></li>
+									<li><a href="shop.html">&#9830;  Jaggery</a></li>
+									<li><a href="shop.html">&#9830;  Sugar Free</a></li>
+								</ul>	
+							</div>
+							<div class="h_nav">
+							<br>
+								<h4>Spices</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Masala</a></li>
+									<li><a href="shop.html">&#9830;  Ground Spices</a></li>
+									<li><a href="shop.html">&#9830;  Whole Sales</a></li>
+									<li><a href="shop.html">&#9830;  International Spices</a></li>
+								</ul>	
+							</div>
+						</div>
+						
+					<!--kept for future enchancement-->	
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						
+						<img src="images/grocery.jpg" alt=""/>
+					</div>
+				</div>
+				</li>
+  			   <li class="active grid"><a class="color4" href="#">Packed Food</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Pasta,Noodles and Snacks</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Vermilli</a></li>
+									<li><a href="shop.html">&#9830;  Noodles</a></li>
+									<li><a href="shop.html">&#9830;  Pasta</a></li>
+									<li><a href="shop.html">&#9830;  Papad</a></li>
+									<li><a href="shop.html">&#9830;  Fryums</a></li>
+									<li><a href="shop.html">&#9830;  Namekeen</a></li>
+									<li><a href="shop.html">&#9830;  Snacks</a></li>
+									<li><a href="shop.html">&#9830;  Chips</a></li>
+									<li><a href="shop.html">&#9830;  Pasta</a></li>
+									<li><a href="shop.html">&#9830;  Papad</a></li>
+									<li><a href="shop.html">&#9830;  Fryums</a></li>
+									<li><a href="shop.html">&#9830;  Namekeen</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Pickles,Sauce and Spreads</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Honey</a></li>
+									<li><a href="shop.html">&#9830;  Jam</a></li>
+									<li><a href="shop.html">&#9830;  Ketchup</a></li>
+									<li><a href="shop.html">&#9830;  Choco & Peanut</a></li>
+									<li><a href="shop.html">&#9830;  Sauce</a></li>
+									<li><a href="shop.html">&#9830;  Pickles</a></li>
+									<li><a href="shop.html">&#9830;  Vineger</a></li>
+									<li><a href="shop.html">&#9830;  Spreads</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Ready to Eat and Cooks</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Soup Mix</a></li>
+									<li><a href="shop.html">&#9830;  Breakfast Mix</a></li>
+									<li><a href="shop.html">&#9830;  Sweet Mix</a></li>
+									<li><a href="shop.html">&#9830;  Snacks Mix</a></li>
+									<li><a href="shop.html">&#9830;  Canned Food</a></li>
+									<li><a href="shop.html">&#9830;  Frozen Vegatables</a></li>
+									<li><a href="shop.html">&#9830;  Frozen Snacks</a></li>
+									<li><a href="shop.html">&#9830;  Ready to Eat</a></li>
+									<li><a href="shop.html">&#9830;  Gravy Mix</a></li>
+								</ul>	
+							</div>							
+						</div>
+						
+						<div class="col1">
+						 <div class="h_nav">
+						   <img src="images/rte.jpg" alt=""/>
+						 </div>
+						</div>
+					</div>
+					<div class="row">
+				</li>				
+				<li><a class="color5" href="#">Personal Care</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Skin and Body Care</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Soaps</a></li>
+									<li><a href="shop.html">&#9830;  Body Wash</a></li>
+									<li><a href="shop.html">&#9830;  Hand Wash</a></li>
+									<li><a href="shop.html">&#9830;  Face Wash</a></li>
+									<li><a href="shop.html">&#9830;  Deodrants</a></li>
+									<li><a href="shop.html">&#9830;  Taclim Powder</a></li>
+									<li><a href="shop.html">&#9830;  Body Lotion</a></li>
+									<li><a href="shop.html">&#9830;  Moistuizer</a></li>
+									<li><a href="shop.html">&#9830;  Sunscreen</a></li>
+									<li><a href="shop.html">&#9830;  Tissue and Wipes</a></li>
+									<li><a href="shop.html">&#9830;  Toner</a></li>
+								</ul>	
+							</div>
+						</div>
+							<div class="col1">
+							<div class="h_nav">
+								<h4>Baby Care</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Baby Soaps and Shampoo</a></li>
+									<li><a href="shop.html">&#9830;  Baby lotion and Oil</a></li>
+									<li><a href="shop.html">&#9830;  Baby Powder</a></li>
+									<li><a href="shop.html">&#9830;  Baby Cream</a></li>
+									<li><a href="shop.html">&#9830;  Diapers</a></li>
+									<li><a href="shop.html">&#9830;  Wipes</a></li>
+									<li><a href="shop.html">&#9830;  Toothpaste</a></li>
+									<li><a href="shop.html">&#9830;  Gift Box</a></li>
+									<li><a href="shop.html">&#9830;  Accessories</a></li>
+								</ul>	
+							</div>
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Beauty</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Face Pack and Scrubs</a></li>
+									<li><a href="shop.html">&#9830;  Fairness Cream</a></li>
+									<li><a href="shop.html">&#9830;  Beauty Cream</a></li>
+									<li><a href="shop.html">&#9830;  Cosmetics</a></li>
+									<li><a href="shop.html">&#9830;  Fairness Beach</a></li>
+								</ul>
+							</div>
+							
+							<div class="h_nav">
+								<h4>Men</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Shaving Cream,Gel & Forms</a></li>
+									<li><a href="shop.html">&#9830;  After Shave</a></li>
+									<li><a href="shop.html">&#9830;  Shaving Brush</a></li>
+									<li><a href="shop.html">&#9830;  Razor & Blades</a></li>
+								</ul>	
+							</div>
+						</div>							
+						
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Oral Care</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Tooth Paste</a></li>
+									<li><a href="shop.html">&#9830;  Tooth Brush</a></li>
+									<li><a href="shop.html">&#9830;  MouthWash</a></li>
+									<li><a href="shop.html">&#9830;  Tongue Cleaner</a></li>
+									<li><a href="shop.html">&#9830;  Tooth Powder</a></li>
+								</ul>
+							</div>
+							<div class="h_nav">
+								<h4>Wellness</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  OTC Medicines</a></li>
+									<li><a href="shop.html">&#9830;  Ayurvedic</a></li>
+								</ul>	
+							</div>
+						</div>
+						
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Hair Care</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Shampoo</a></li>
+									<li><a href="shop.html">&#9830;  Conditioner</a></li>
+									<li><a href="shop.html">&#9830;  Hair Oil & Gel</a></li>
+									<li><a href="shop.html">&#9830;  Hair Color & Brush</a></li>
+									<li><a href="shop.html">&#9830;  Hair Brush</a></li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<img src="images/pc.jpg" alt=""/>
+					</div>
+				</div>
+				</li>
+				<li><a class="color6" href="#">Biscuit and Beverages</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Confectionary</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Sweet</a></li>
+									<li><a href="shop.html">&#9830;  Biscuit</a></li>
+									<li><a href="shop.html">&#9830;  Chocolates</a></li>
+									<li><a href="shop.html">&#9830;  Candy</a></li>
+									<li><a href="shop.html">&#9830;  Granola Bars</a></li>
+									<li><a href="shop.html">&#9830;  Gum & Fresheners</a></li>
+								</ul>	
+							</div>	
+							<div class="h_nav">
+								<h4 class="top">Fruit Juices & Drinks</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Juices</a></li>
+									<li><a href="shop.html">&#9830;  Flavoured Drinks</a></li>
+									<li><a href="shop.html">&#9830;  Soft Drinks</a></li>
+									<li><a href="shop.html">&#9830;  Waters & Soda</a></li>
+									<li><a href="shop.html">&#9830;  Concentrates</a></li>
+								</ul>	
+							</div>												
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Tea & Coffee</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Tea</a></li>
+									<li><a href="shop.html">&#9830;  Tea Bags</a></li>
+									<li><a href="shop.html">&#9830;  Coffee</a></li>
+									<li><a href="shop.html">&#9830;  Ice Tea</a></li>
+									<li><a href="shop.html">&#9830;  Dairy Whitener</a></li>
+								</ul>	
+							</div>						
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Health & Energy Drinks</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Health Drinks</a></li>
+									<li><a href="shop.html">&#9830;  Energy Drinks</a></li>
+								</ul>	
+							</div>							
+						</div>
+					<div class="row">
+						<div class="col2"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<img src="images/biscuit.jpg" alt=""/>
+					</div>
+				</div>
+				</li>
+				<li><a class="color7" href="#">Wash & Clean</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Laundry</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Detergent Powder</a></li>
+									<li><a href="shop.html">&#9830;  Detergent Bars</a></li>
+									<li><a href="shop.html">&#9830;  Liquid Detergent</a></li>
+									<li><a href="shop.html">&#9830;  Fabric Conditioner</a></li>
+									<li><a href="shop.html">&#9830;  Whitener</a></li>
+									<li><a href="shop.html">&#9830;  Stiffers</a></li>
+									<li><a href="shop.html">&#9830;  Strain Remover</a></li>
+									<li><a href="shop.html">&#9830;  Brushes & Clips</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Utensils</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Liquid Dishwash</a></li>
+									<li><a href="shop.html">&#9830;  Dishwash Bar</a></li>
+									<li><a href="shop.html">&#9830;  Dishwash Powder</a></li>
+									<li><a href="shop.html">&#9830;  Scrubber</a></li>
+									<li><a href="shop.html">&#9830;  Cooper & Brass</a></li>
+									<li><a href="shop.html">&#9830;  Cleaner</a></li>
+								</ul>	
+							</div>							
+							<div class="h_nav">
+								<h4>Cars</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Shampoo</a></li>
+									<li><a href="shop.html"Sponges</a></li>
+								</ul>	
+							</div>
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Floor & Glass</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Glass Cleaner</a></li>
+									<li><a href="shop.html">&#9830;  Surface Cleaner</a></li>
+									<li><a href="shop.html">&#9830;  Brush</a></li>
+									<li><a href="shop.html">&#9830;  Mop</a></li>
+									<li><a href="shop.html">&#9830;  Broom</a></li>
+								</ul>	
+							</div>												
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Kitchen</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Kitchen Moppy</a></li>
+									<li><a href="shop.html">&#9830;  Tissue Paper</a></li>
+									<li><a href="shop.html">&#9830;  Liquid Cleaner</a></li>
+								</ul>	
+							</div>						
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Bathroom</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Toilet Brushes</a></li>
+									<li><a href="shop.html">&#9830;  Toilet Cleaner</a></li>
+								</ul>	
+							</div>
+							<div class="h_nav">
+								<h4>Shoes</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Shoes Polish</a></li>
+									<li><a href="shop.html">&#9830;  Shoes Polish Brush</a></li>
+								</ul>	
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col2"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<img src="images/wash.jpg" alt=""/>
+					</div>
+    				</div>
+				</li>
+				<li><a class="color8" href="#">HouseHold</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Staionary</h4>
+								<ul>
+									<li><a href="shop.html">&#9830;  Office</a></li>
+									<li><a href="shop.html">&#9830;  School</a></li>
+									<li><a href="shop.html">&#9830;  Home</a></li>
+									<li><a href="shop.html">&#9830;  Colors</a></li>
+									<li><a href="shop.html">&#9830;  Pen Pencils</a></li>
+									<li><a href="shop.html">&#9830;  Tapes & Adhesives</a></li>
+									<li><a href="shop.html">Activi	ty</a></li>
+								</ul>	
+							</div>							
+						</div>
+					</div>
+				</li>
+		
+				<ul class="icon2 sub-icon2 profile_img">
+					<li><a class="active-icon c2" href="#"> </a>
+						<ul class="sub-icon2 list">
+							<li><h3>Nilgiri</h3>
+							 	<div class="grid_img">
+								<div class="css3"><img src="images/product1.jpg" height="50" width="50" alt=""/></div>
+								<div class="price">Rs.80</div>
+								<div >
+							</li>
+						</ul>
+					</li>
+				</ul>
+		</ul> 
+		   <div class="clear"></div>
+		   
+     	</div>
+       </div>
+       <div class="index-banner">
+       	  <div class="wmuSlider example1" style="height: 560px;">
+			  <div class="wmuSliderWrapper">
+				  <article style="position: relative; width: 100%; opacity: 1;"> 
+				   	<div class="banner-wrap">
+					   	<div class="slider-left">
+							<img src="images/slider1.jpg"  alt="" width="42" height="42" > 
+						</div>
+						 <div class="slider-right">
+						    <h1>Delivered</h1>
+							<br>
+						    <h2>Door Step</h2>
+							
+						    <p>Shop Smart</p>
+						    <div class="btn"><a href="shop.html">Shop Now</a></div>
+							<br><br>
+						 </div>
+						 <div class="clear"></div>
+					 </div>
+					</article>
+				   <article style="position: absolute; width: 100%; opacity: 0;"> 
+				   	 <div class="banner-wrap">
+					   	<div class="slider-left">
+							<img src="images/fruits.png" alt=""/> 
+						</div>
+						 <div class="slider-right">
+						    <h1>Buy</h1>
+							<br><br>
+						    <h2>Now</h2>
+						    <p>Lorem ipsum dolor sit amet</p>
+						    <div class="btn"><a href="shop.html">Shop Now</a></div>
+						 </div>
+						 <div class="clear"></div>
+					 </div>
+				   </article>
+				   <article style="position: absolute; width: 100%; opacity: 0;">
+				   	<div class="banner-wrap">
+					   	<div class="slider-left">
+							<img src="images/sliderimage.jpg" alt=""/> 
+						</div>
+						 <div class="slider-right">
+						    <h1>Discount</h1>
+						    <h2>Upto 30%</h2>
+						    <p>On Selected Stores</p>
+						    <div class="btn"><a href="shop.html">Shop Now</a></div>
+						 </div>
+						 <div class="clear"></div>
+					 </div>
+				   </article>
+				   <article style="position: absolute; width: 100%; opacity: 0;">
+				   	<div class="banner-wrap">
+					   	<div class="slider-left">
+							<img src="images/banner2.jpg" alt=""/> 
+						</div>
+						 <div class="slider-right">
+						    <h1>Classic</h1>
+						    <h2>White</h2>
+						    <p>Lorem ipsum dolor sit amet</p>
+						    <div class="btn"><a href="shop.html">Shop Now</a></div>
+						 </div>
+						 <div class="clear"></div>
+					 </div>
+				   </article>
+				   
+				</div>
+                <a class="wmuSliderPrev">Previous</a><a class="wmuSliderNext">Next</a>
+                <ul class="wmuSliderPagination">
+                	<li><a href="#" class="">0</a></li>
+                	<li><a href="#" class="">1</a></li>
+                	<li><a href="#" class="wmuActive">2</a></li>
+                	<li><a href="#">3</a></li>
+                	<li><a href="#">4</a></li>
+                  </ul>
+                 <a class="wmuSliderPrev">Previous</a><a class="wmuSliderNext">Next</a><ul class="wmuSliderPagination"><li><a href="#" class="wmuActive">0</a></li><li><a href="#" class="">1</a></li><li><a href="#" class="">2</a></li><li><a href="#" class="">3</a></li><li><a href="#" class="">4</a></li></ul></div>
+            	 <script src="js/jquery.wmuSlider.js"></script> 
+				 <script type="text/javascript" src="js/modernizr.custom.min.js"></script> 
+						<script>
+       						 $('.example1').wmuSlider();         
+   						</script> 	           	      
+             </div>
+             <div class="main">
+                <div class="wrap">
+				<!--
+             	  <div class="content-top">
+             		<div class="lsidebar span_1_of_c1">
+					  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing</p>
+					</div>
+					<div class="cont span_2_of_c1">
+					  <div class="social">	
+					     <ul>	
+						  <li class="facebook"><a href="#"><span> </span></a><div class="radius"> <img src="images/radius.png"><a href="#"> </a></div><div class="border hide"><p class="num">1.51K</p></div></li>
+						 </ul>
+			   		   </div>
+					   <div class="social">	
+						   <ul>	
+							  <li class="twitter"><a href="#"><span> </span></a><div class="radius"> <img src="images/radius.png"></div><div class="border hide"><p class="num">1.51K</p></div></li>
+						  </ul>
+			     		</div>
+						 <div class="social">	
+						   <ul>	
+							  <li class="google"><a href="#"><span> </span></a><div class="radius"> <img src="images/radius.png"></div><div class="border hide"><p class="num">1.51K</p></div></li>
+						   </ul>
+			    		 </div>
+						 <div class="social">	
+						   <ul>	
+							  <li class="dot"><a href="#"><span> </span></a><div class="radius"> <img src="images/radius.png"></div><div class="border hide"><p class="num">1.51K</p></div></li>
+						  </ul>
+			     		</div>
+						<div class="clear"> </div>
+					  </div>
+					  <div class="clear"></div>			
+				   </div>
+				   -->
+				  <div class="content-bottom">
+				   <div class="box1">
+				    <div class="col_1_of_3 span_1_of_3"><a href="single.html">
+				     <div class="view view-fifth">
+				  	  <div class="top_box">
+					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
+					  	<p class="m_2">Lorem ipsum</p>
+				         <div class="grid_img">
+						   <div class="css3"><img src="images/product1.jpg" width="150" height="150" alt=""/></div>
+					          <div class="mask">
+	                       		<div class="info">Quick View</div>
+			                  </div>
+	                    </div>
+                       <div class="price">Rs.48</div>
+					   </div>
+					    </div>
+					   <span class="rating">
+				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
+				        <label for="rating-input-1-4" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
+				        <label for="rating-input-1-3" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
+				        <label for="rating-input-1-2" class="rating-star"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+		        	  (45)
+		    	      </span>
+						 <ul class="list">
+						  <li>
+						  	<img src="images/plus.png" alt=""/>
+						  	<ul class="icon1 sub-icon1 profile_img">
+							  <li><a class="active-icon c1" href="#">Add To Bag </a>
+								<ul class="sub-icon1 list">
+									<li><h3>sed diam nonummy</h3><a href=""></a></li>
+									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
+								</ul>
+							  </li>
+							 </ul>
+						   </li>
+					     </ul>
+			    	    <div class="clear"></div>
+			    	</a></div>
+				    <div class="col_1_of_3 span_1_of_3"><a href="single.html">
+				     <div class="view view-fifth">
+				  	  <div class="top_box">
+					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
+					  	<p class="m_2">Lorem ipsum</p>
+					    <div class="grid_img">
+						   <div class="css3"><img src="images/product2.jpg" width="150" height="150" alt=""/></div>
+					          <div class="mask">
+	                       		<div class="info">Quick View</div>
+			                  </div>
+	                    </div>
+                       <div class="price">Rs.48</div>
+					   </div>
+					    </div>
+					   <span class="rating">
+				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
+				        <label for="rating-input-1-4" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
+				        <label for="rating-input-1-3" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
+				        <label for="rating-input-1-2" class="rating-star"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+		        	  (45)
+		    	      </span>
+						 <ul class="list">
+						  <li>
+						  	<img src="images/plus.png" alt=""/>
+						  	<ul class="icon1 sub-icon1 profile_img">
+							  <li><a class="active-icon c1" href="#">Add To Bag </a>
+								<ul class="sub-icon1 list">
+									<li><h3>sed diam nonummy</h3><a href=""></a></li>
+									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
+								</ul>
+							  </li>
+							 </ul>
+						   </li>
+					     </ul>
+			    	    <div class="clear"></div>
+			    	</a></div>
+				    <div class="col_1_of_3 span_1_of_3"><a href="single.html">
+				     <div class="view view-fifth">
+				  	  <div class="top_box">
+					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
+					  	<p class="m_2">Lorem ipsum</p>
+				         <div class="grid_img">
+						   <div class="css3"><img src="images/product3.jpg" height="150" width="150" alt=""/></div>
+					          <div class="mask">
+	                       		<div class="info">Quick View</div>
+			                  </div>
+	                    </div>
+                       <div class="price">Rs.60</div>
+					   </div>
+					    </div>
+					   <span class="rating">
+				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
+				        <label for="rating-input-1-4" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
+				        <label for="rating-input-1-3" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
+				        <label for="rating-input-1-2" class="rating-star"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+		        	  (45)
+		    	      </span>
+						 <ul class="list">
+						  <li>
+						  	<img src="images/plus.png" alt=""/>
+						  	<ul class="icon1 sub-icon1 profile_img">
+							  <li><a class="active-icon c1" href="#">Add To Bag </a>
+								<ul class="sub-icon1 list">
+									<li><h3>sed diam nonummy</h3><a href=""></a></li>
+									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
+								</ul>
+							  </li>
+							 </ul>
+						   </li>
+					     </ul>
+			    	    <div class="clear"></div>
+			    	</a></div>
+				  <div class="clear"></div>
+			  </div>
+			  <div class="box1">
+				  <div class="col_1_of_3 span_1_of_3"><a href="single.html">
+				     <div class="view view-fifth">
+				  	  <div class="top_box">
+					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
+					  	<p class="m_2">Lorem ipsum</p>
+				         <div class="grid_img">
+						   <div class="css3"><img src="images/product4.jpg" width="100" height="100" alt=""/></div>
+					          <div class="mask">
+	                       		<div class="info">Quick View</div>
+			                  </div>
+	                    </div>
+                       <div class="price">Rs.30</div>
+					   </div>
+					    </div>
+					   <span class="rating">
+				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
+				        <label for="rating-input-1-4" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
+				        <label for="rating-input-1-3" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
+				        <label for="rating-input-1-2" class="rating-star"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+		        	  (45)
+		    	      </span>
+						 <ul class="list">
+						  <li>
+						  	<img src="images/plus.png" alt=""/>
+						  	<ul class="icon1 sub-icon1 profile_img">
+							  <li><a class="active-icon c1" href="#">Add To Bag </a>
+								<ul class="sub-icon1 list">
+									<li><h3>sed diam nonummy</h3><a href=""></a></li>
+									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
+								</ul>
+							  </li>
+							 </ul>
+						   </li>
+					     </ul>
+			    	    <div class="clear"></div>
+			    	</a></div>
+				    <div class="col_1_of_3 span_1_of_3"><a href="single.html">
+				     <div class="view view-fifth">
+				  	  <div class="top_box">
+					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
+					  	<p class="m_2">Lorem ipsum</p>
+				         <div class="grid_img">
+						   <div class="css3"><img src="images/product5.jpg" width="100" height="100" alt=""/></div>
+					          <div class="mask">
+	                       		<div class="info">Quick View</div>
+			                  </div>
+	                    </div>
+                       <div class="price">£480</div>
+					   </div>
+					    </div>
+					   <span class="rating">
+				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
+				        <label for="rating-input-1-4" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
+				        <label for="rating-input-1-3" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
+				        <label for="rating-input-1-2" class="rating-star"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+		        	  (45)
+		    	      </span>
+						 <ul class="list">
+						  <li>
+						  	<img src="images/plus.png" alt=""/>
+						  	<ul class="icon1 sub-icon1 profile_img">
+							  <li><a class="active-icon c1" href="#">Add To Bag </a>
+								<ul class="sub-icon1 list">
+									<li><h3>sed diam nonummy</h3><a href=""></a></li>
+									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
+								</ul>
+							  </li>
+							 </ul>
+						   </li>
+					     </ul>
+			    	    <div class="clear"></div>
+			    	</a></div>
+				   <div class="col_1_of_3 span_1_of_3"><a href="single.html">
+				     <div class="view view-fifth">
+				  	  <div class="top_box">
+					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
+					  	<p class="m_2">Lorem ipsum</p>
+				         <div class="grid_img">
+						   <div class="css3"><img src="images/product7.jpg" width="100" height="100"  alt=""/></div>
+					          <div class="mask">
+	                       		<div class="info">Quick View</div>
+			                  </div>
+	                    </div>
+                       <div class="price">£480</div>
+					   </div>
+					    </div>
+					   <span class="rating">
+				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
+				        <label for="rating-input-1-4" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
+				        <label for="rating-input-1-3" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
+				        <label for="rating-input-1-2" class="rating-star"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+		        	  (45)
+		    	      </span>
+						 <ul class="list">
+						  <li>
+						  	<img src="images/plus.png" alt=""/>
+						  	<ul class="icon1 sub-icon1 profile_img">
+							  <li><a class="active-icon c1" href="#">Add To Bag </a>
+								<ul class="sub-icon1 list">
+									<li><h3>sed diam nonummy</h3><a href=""></a></li>
+									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
+								</ul>
+							  </li>
+							 </ul>
+						   </li>
+					     </ul>
+			    	    <div class="clear"></div>
+			    	</a></div>
+				  <div class="clear"></div>
+			    </div>
+			  </div>
+			 </div>
+        </div>
+        <div class="footer">
+       	  <div class="footer-top">
+       		<div class="wrap">
+       			   <div class="col_1_of_footer-top span_1_of_footer-top">
+				  	 <ul class="f_list">
+				  	 	<li><img src="images/f_icon.png" alt=""/><span class="delivery">Free delivery on all orders over Rs.1000*</span></li>
+				  	 </ul>
+				   </div>
+				   <div class="col_1_of_footer-top span_1_of_footer-top">
+				  	<ul class="f_list">
+				  	 	<li><img src="images/f_icon1.png" alt=""/><span class="delivery">Customer Service :<span class="orange"> (800) 000-2587 (freephone)</span></span></li>
+				  	 </ul>
+				   </div>
+				   <div class="col_1_of_footer-top span_1_of_footer-top">
+				  	<ul class="f_list">
+				  	 	<li><img src="images/f_icon2.png" alt=""/><span class="delivery">Fast delivery & free returns</span></li>
+				  	 </ul>
+				   </div>
+				  <div class="clear"></div>
+			 </div>
+       	 </div>
+       	 
+       	 <div class="footer-bottom">
+       	 	<div class="wrap">
+       	 		<div class="section group">
+					<div class="cssmenu">
+						<ul>
+						   <li><a href="shop.html">Store finder</a></li>
+						   <li><a href="shop.html">Customer Service</a></li>
+						   <li><a href="shop.html">FAQ</a></li>
+						   <li><a href="shop.html">Online Shop Contact Us</a></li>
+						   <li><a href="shop.html">about Closerby Products</a></li>
+						   <li><a href="shop.html">Payment </a></li>
+						   <li><a href="shop.html">Shipping </a></li>
+						   <li><a href="shop.html">Returning</a></li>
+						   <li><a href="shop.html">Delivery Terms</a></li>
+						   <li><a href="shop.html">Site Map</a></li>
+						   <li><a href="shop.html">Gift Card</a></li>
+						   <li><a href="shop.html">About Us</a></li>
+						   <li><a href="shop.html">Careers</a></li>
+						   <li><a href="shop.html">Press</a></li>
+						</ul>
+						
+					</div>
+		            
+				</div>
+				<div class="clear"></div>
+			</div>
+       	 	</div>
+       	 </div>
+       	 <div class="copy">
+       	   <div class="wrap">
+       	   	  <p>© All rights reserved | Template by&nbsp;<a href="#">Closerby</a></p>
+       	   </div>
+       	 </div>
+       </div>
+       <script type="text/javascript">
+			$(document).ready(function() {
+			
+				var defaults = {
+		  			containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+		 		};
+				
+				
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				
+			});
+		</script>
+        <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+</body>
+</html>
